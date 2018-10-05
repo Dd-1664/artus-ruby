@@ -1,0 +1,27 @@
+    <!-- Begin page content -->
+    <%# 
+    <main role="main" class="container"> 
+      <h1 class="mt-5">Sticky footer with fixed navbar</h1> 
+      <p class="lead">
+        Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with 
+        <code>padding-top: 60px;</code> on the 
+        <code>body &gt; .container</code>.
+      </p>
+    </main> 
+    %>
+
+    <!-- Begin page content -->
+    <div class="row">
+        <div class="col-md-4">
+            <main role="main" class="container">
+                <h1>Homepage for testing Ruby</h1>
+                <span>here's the homepage</span>
+                <h2>Variables</h2>
+                <p>Nom : <%= @name %>.</p>
+                <p>Age : <%= @age %>.</p>
+                    <% @age.times do |i| %>
+                        <%= i %> an 
+                    <% end %>
+            </main>
+        </div>
+    </div>
