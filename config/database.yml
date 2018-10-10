@@ -8,9 +8,9 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: exercice_dev
+  database: blog_dev
   pool: 5
-  host: 51.75.27.80
-  username: remote
-  password: M4st3rY0d4
+  host: localhost
+  username: local
+  password: M3tr01D
   socket: /var/run/mysqld/mysqld.sock
