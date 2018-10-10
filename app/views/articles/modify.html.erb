@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12">
+        <main role="main" class="container">
+
+            <h1>Modify page</h1>
+
+            <%= form_tag "/modify/#{@article.id}", method: "patch" do %>
+              <input type="text" name="text" value="<%= @article.article_text %>" />
+              <input type="submit" value="Modify" />
+            <% end %>
+
+            <p><a href="/display">Retourner à la liste</a></p>
+
+        </main>
+    </div>
+</div>

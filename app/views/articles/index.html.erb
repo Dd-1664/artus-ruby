@@ -1,50 +1,48 @@
 <div class="row">
-    <div class="col-md-4">
+
+    <div class="col-md-2">
         <main role="main" class="container">
             <h1>Titles</h1>
-            
+
                 <% @articles.each do |article| %>
                     <p>
                     <a href="/show/<%= article.id %>">
                         <%= article.title %>
                     </a>
                     </p>
-                <% end %>    
+                <% end %>
         </main>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-2">
         <main role="main" class="container">
             <h1>Author</h1>
-            
+
                 <% @articles.each do |article| %>
                     <p><%= article.author %></p>
-                <% end %>                  
+                <% end %>
         </main>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-2">
         <main role="main" class="container">
             <h1>Date</h1>
-            
+
                 <% @articles.each do |article| %>
                     <p><%= article.article_date %></p>
-                <% end %>     
+                <% end %>
         </main>
     </div>
-    
-</div>
 
-<div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <main role="main" class="container">
-            <%= form_tag "/display", method: "post" do %>
-                <input type="string" name="title" placeholder="Title" />
-                <input type="string" name="author" placeholder="Author" />
-                <input type="text" name="text" placeholder="Type your text here" />
-                <input type="datetime" name="date" placeholder="Date" />
-                <input type="submit" value="Ajouter le livre"/>
-            <% end %>
+            <h1>Modify</h1>
+
+                <% @articles.each do |article| %>
+                    <p><a href="/modify/<%= article.id %>">Modify</a></p>
+                <% end %>
         </main>
     </div>
+
+
 </div>

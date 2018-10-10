@@ -1,13 +1,19 @@
 <div class="row">
     <div class="col-md-12">
         <main role="main" class="container">
-            <%= form_tag "/add", method: "post" do %>
+
+            <h1>Adding page</h1>
+
+            <%= form_tag "/adding", method: "post" do %>
                 <input type="string" name="title" placeholder="Title" />
                 <input type="string" name="author" placeholder="Author" />
-                <input type="text" name="text" placeholder="Type your text here" />
+                <input type="textarea" name="text" placeholder="Type your text here" />
                 <input type="datetime" name="date" placeholder="Date" />
-                <input type="submit" value="Ajouter le livre"/>
+                <input type="submit" value="Add"/>
             <% end %>
+
+            <p><a href="/display">Retourner à la liste</a></p>
+
         </main>
     </div>
 </div>
